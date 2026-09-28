@@ -1,0 +1,46 @@
+{
+    "email": "ttttestgencay@gmail.com",
+    "password": "Admin123!",
+    "invalidEmails": [
+        "semra",
+        "semra@",
+        "@gmail.com",
+        "semra@gmail",
+        "semra gmail.com",
+        "semra@@gmail.com"
+    ],
+    "searchData": {
+        "singleCharacterSearch": "p",
+        "authorSearch": "schopenhauer",
+        "nonExistingSearch": "asdfqwert"
+    },
+    "sortOptions": [
+        "Varsayılan Sıralama",
+        "Yeniden Eskiye",
+        "Eskiden Yeniye",
+        "Fiyat Artan",
+        "Fiyat Azalan"
+    ],
+    "mainCategories": [
+        {
+            "menu": "ROMAN",
+            "expectedTitle": "Roman"
+        },
+        {
+            "menu": "BİLİM KURGU",
+            "expectedTitle": "Bilimkurgu"
+        },
+        {
+            "menu": "ÇOCUK KİTAPLARI",
+            "expectedTitle": "Çocuk Kitapları"
+        },
+        {
+            "menu": "ÇİZGİ ROMAN",
+            "expectedTitle": "Çizgi Roman"
+        },
+        {
+            "menu": "SINAV KİTAPLARI",
+            "expectedTitle": "Sınavlara Hazırlık Kitapları"
+        }
+    ]
+}
