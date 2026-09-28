@@ -65,26 +65,14 @@ describe("User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Eklem
 
     it("AC6 - Ürün sepete eklendikten sonra sağ üstteki sepet ikonundaki ürün sayısı 1 artmalıdır.", () => {
 
-        cy.get(HomePage.cartItemCount)
-            .invoke("text")
-            .then((countText) => {
-
-                const initialCount = Number(countText.trim());
-
-                cy.get(SearchPage.productName)
-                    .eq(1)
-                    .click();
-
-                cy.get(ProductPage.addToCartButton)
-                    .should("be.visible")
-                    .click();
-
-                cy.get(HomePage.cartItemCount)
-                    .should(($count) => {
-                        const newCount = Number($count.text().trim());
-
-                        expect(newCount).to.eq(initialCount + 1);
-                    });
+        cy.get(HomePage.cartItemCount).invoke("text").then((countText) => {
+            const initialCount = Number(countText.trim());
+            cy.get(SearchPage.productName).eq(1).click();
+            cy.get(ProductPage.addToCartButton).should("be.visible").click();
+            cy.get(HomePage.cartItemCount).should(($count) => {
+                const newCount = Number($count.text().trim());
+                expect(newCount).to.eq(initialCount + 1);
             });
+        });
     });
 });
