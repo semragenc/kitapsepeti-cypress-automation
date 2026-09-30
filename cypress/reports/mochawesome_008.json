@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-30T13:46:16.940Z",
+    "end": "2026-09-30T13:47:01.393Z",
+    "duration": 44453,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ce289b3d-976e-453f-ac98-86685b9a6e55",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/product.cy.js",
+      "file": "cypress/e2e/tests/product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "705c45e9-57f7-488a-9359-c0f91dc75625",
+          "title": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AC1 / 1 - Kullanıcı ürün görseline tıkladığında ürün detay sayfasına yönlendirilmelidir.",
+              "fullTitle": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme AC1 / 1 - Kullanıcı ürün görseline tıkladığında ürün detay sayfasına yönlendirilmelidir.",
+              "timedOut": null,
+              "duration": 3765,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_SearchPage.default.productImage).first().should(\"be.visible\").closest(\"a\").invoke(\"attr\", \"href\").then(productUrl => {\n  cy.get(_SearchPage.default.productImage).first().click();\n  cy.url().should(\"include\", productUrl);\n});",
+              "err": {},
+              "uuid": "1c28d811-666e-49f3-9bde-80b6d946c480",
+              "parentUUID": "705c45e9-57f7-488a-9359-c0f91dc75625",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "AC1 / 2 - Kullanıcı ürün ismine tıkladığında ürün detay sayfasına yönlendirilmelidir.",
+              "fullTitle": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme AC1 / 2 - Kullanıcı ürün ismine tıkladığında ürün detay sayfasına yönlendirilmelidir.",
+              "timedOut": null,
+              "duration": 3662,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_SearchPage.default.productName).first().should(\"be.visible\").invoke(\"attr\", \"href\").then(productUrl => {\n  cy.get(_SearchPage.default.productName).first().click();\n  cy.url().should(\"include\", productUrl);\n});",
+              "err": {},
+              "uuid": "b0a9b989-2d5b-49fb-a4ef-dd8a5f1ebaa0",
+              "parentUUID": "705c45e9-57f7-488a-9359-c0f91dc75625",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "AC2 - Ürün detay sayfasında ürün adı, yazar, yayınevi ve fiyat bilgileri görüntülenmelidir.",
+              "fullTitle": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme AC2 - Ürün detay sayfasında ürün adı, yazar, yayınevi ve fiyat bilgileri görüntülenmelidir.",
+              "timedOut": null,
+              "duration": 1901,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_SearchPage.default.productName).first().click();\n_ProductPage.default.productInformations.forEach(element => {\n  cy.get(element).should(\"be.visible\").and(\"not.be.empty\");\n});",
+              "err": {},
+              "uuid": "d944fe1b-ec90-445f-9055-20eef0b27f5a",
+              "parentUUID": "705c45e9-57f7-488a-9359-c0f91dc75625",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "AC3 - Ürün Hakkında Bilgiler bölümünde ürün detay bilgileri görüntülenmelidir.",
+              "fullTitle": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme AC3 - Ürün Hakkında Bilgiler bölümünde ürün detay bilgileri görüntülenmelidir.",
+              "timedOut": null,
+              "duration": 2676,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_SearchPage.default.productName).eq(1).click();\ncy.get(_ProductPage.default.productInformationSection).should(\"be.visible\").within(() => {\n  _ProductPage.default.productDetailLabels.forEach(label => {\n    cy.contains(label).should(\"be.visible\");\n  });\n});",
+              "err": {},
+              "uuid": "d19038f1-9d55-4283-ba68-679188264210",
+              "parentUUID": "705c45e9-57f7-488a-9359-c0f91dc75625",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "AC4 - Ürün detay sayfasında fiyat bilgisinin altında işlevsel bir \"Sepete Ekle\" butonu bulunmalıdır.",
+              "fullTitle": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme AC4 - Ürün detay sayfasında fiyat bilgisinin altında işlevsel bir \"Sepete Ekle\" butonu bulunmalıdır.",
+              "timedOut": null,
+              "duration": 1898,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_SearchPage.default.productName).eq(1).click();\ncy.get(_ProductPage.default.addToCartButton).should(\"be.visible\").and(\"not.be.disabled\");",
+              "err": {},
+              "uuid": "6f2b2cba-1812-4e47-a7c7-9f21fa90868d",
+              "parentUUID": "705c45e9-57f7-488a-9359-c0f91dc75625",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "AC5 - Sepete Ekle butonuna tıklandığında \"Ürün başarıyla sepete eklendi\" onay mesajı görüntülenmelidir.",
+              "fullTitle": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme AC5 - Sepete Ekle butonuna tıklandığında \"Ürün başarıyla sepete eklendi\" onay mesajı görüntülenmelidir.",
+              "timedOut": null,
+              "duration": 2950,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_SearchPage.default.productName).eq(1).click();\ncy.get(_ProductPage.default.addToCartButton).should(\"be.visible\").click();\ncy.get(_ProductPage.default.addToCartSuccessMessage).should(\"be.visible\").and(\"contain.text\", \"Ürün Başarıyla Sepete Eklendi\");\ncy.get(_ProductPage.default.goToCartPopupButton).should(\"be.visible\");\ncy.get(_ProductPage.default.buyNowPopupButton).should(\"be.visible\");",
+              "err": {},
+              "uuid": "80c5d411-c669-40a1-b5f5-6ff8dd9a0c47",
+              "parentUUID": "705c45e9-57f7-488a-9359-c0f91dc75625",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "AC6 - Ürün sepete eklendikten sonra sağ üstteki sepet ikonundaki ürün sayısı 1 artmalıdır.",
+              "fullTitle": "User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Ekleme AC6 - Ürün sepete eklendikten sonra sağ üstteki sepet ikonundaki ürün sayısı 1 artmalıdır.",
+              "timedOut": null,
+              "duration": 2205,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_HomePage.default.cartItemCount).invoke(\"text\").then(countText => {\n  const initialCount = Number(countText.trim());\n  cy.get(_SearchPage.default.productName).eq(1).click();\n  cy.get(_ProductPage.default.addToCartButton).should(\"be.visible\").click();\n  cy.get(_HomePage.default.cartItemCount).should($count => {\n    const newCount = Number($count.text().trim());\n    expect(newCount).to.eq(initialCount + 1);\n  });\n});",
+              "err": {},
+              "uuid": "4409257b-d700-412f-8eb5-175a84e4f78c",
+              "parentUUID": "705c45e9-57f7-488a-9359-c0f91dc75625",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1c28d811-666e-49f3-9bde-80b6d946c480",
+            "b0a9b989-2d5b-49fb-a4ef-dd8a5f1ebaa0",
+            "d944fe1b-ec90-445f-9055-20eef0b27f5a",
+            "d19038f1-9d55-4283-ba68-679188264210",
+            "6f2b2cba-1812-4e47-a7c7-9f21fa90868d",
+            "80c5d411-c669-40a1-b5f5-6ff8dd9a0c47",
+            "4409257b-d700-412f-8eb5-175a84e4f78c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
