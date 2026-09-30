@@ -409,5 +409,5 @@ Bu çıktılar birlikte kullanılarak test kapsamının hem kod hem de çalışt
 
 
 Proje Sahibi
-Semra Genç
-QA Manual & QA Automation
+Semra GENÇ
+QA Engineer
