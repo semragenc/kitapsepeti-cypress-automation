@@ -396,17 +396,22 @@ Bu proje yalnızca QA/Test Automation amacıyla geliştirilmiştir.
 - Testler ödeme işlemini tamamlamadan sonlandırılır.
 
 ## 📦 Proje Çıktıları
-Proje sonunda aşağıdaki çıktılar sunulmaktadır:
-1. Test Senaryoları
-User Story ve Acceptance Criteria bazlı test kapsamı ve otomasyon eşleştirmesi.
-2. Cypress Automation Repository
-Page Object Model, test specs, fixtures, custom commands ve Cypress konfigürasyonunu içeren kaynak kod.
-3. Test Execution Evidence
-- Mochawesome raporları
-- Test screenshots
-- Execution videos
-Bu çıktılar birlikte kullanılarak test kapsamının hem kod hem de çalıştırma sonuçları açısından izlenebilir olması hedeflenmiştir.
+1. **Test Senaryoları**
+   - User Story ve Acceptance Criteria bazlı manuel test senaryoları ve test kapsamı.
+   - 📄 [Manuel Test Senaryoları Dokümanı](https://drive.google.com/file/d/1A2eemQkS356je7H30nk802bySKL31xBY/view?usp=sharing)
 
+2. **Cypress Automation Repository**
+   - Page Object Model, test specs, fixtures, custom commands ve Cypress konfigürasyonunu içeren kaynak kod.
+
+3. **Test Execution Evidence**
+   - Mochawesome raporları
+   - Test screenshots
+   - Execution videos
+   - 🎥 [US05 – Ödeme ve Sipariş Onayı Test Videosu](https://drive.google.com/file/d/10e2fGH7KzyCXsA2OdVWLFhK8mha7dl46/view?usp=sharing)
+
+> ⚠️ **DİKKAT:** US05 test execution videosu, GitHub'ın tek dosya yükleme limitini aşması nedeniyle Google Drive üzerinden paylaşılmıştır.
+
+Bu çıktılar birlikte kullanılarak test kapsamının hem kod hem de çalıştırma sonuçları açısından izlenebilir olması hedeflenmiştir.
 
 Proje Sahibi
 Semra GENÇ
