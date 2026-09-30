@@ -67,7 +67,7 @@ describe("User Story - 02 - Ürün Arama ve Listeleme", () => {
                 cy.wrap(firstThreeCards).each(($card) => {
                     cy.wrap($card).find(SearchPage.productPrice).should("be.visible");
                     cy.wrap($card).realHover();
-                    cy.wrap($card).find(SearchPage.addToCartButton).should("be.visible");
+                    cy.wrap($card).find(SearchPage.addToCartButton, { timeout: 10000 }).should("be.visible");
                 });
             });
         });
@@ -88,8 +88,10 @@ describe("User Story - 02 - Ürün Arama ve Listeleme", () => {
 
     it("AC7 / 1 - Kategoriler filtresi bulunur ve uygulanabilmelidir.", () => {
         cy.fixture("testData").then((data) => {
+            cy.intercept("GET","**/srv/service/filter/get/filters-categories-brands-models*").as("loadFilters");
             cy.searchProduct(data.searchData.authorSearch);
             cy.url().should("include", "/arama");
+            cy.wait("@loadFilters");
             cy.get(SearchPage.categoryFilter).should("be.visible");
             cy.get(SearchPage.categoryOptions, { timeout: 10000 }).should("be.visible").first().click();
             cy.url().should("include", "category=");

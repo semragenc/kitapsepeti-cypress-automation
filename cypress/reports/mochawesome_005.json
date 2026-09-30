@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-30T07:58:52.013Z",
+    "end": "2026-09-30T07:59:01.551Z",
+    "duration": 9538,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "edcd63f7-1d09-40a2-97d6-5acc908b307a",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/search.cy.js",
+      "file": "cypress/e2e/tests/search.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "53c55177-b976-492b-971d-54bd4b013b8d",
+          "title": "User Story - 02 - Ürün Arama ve Listeleme",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AC5 - Ürün kartında Sepete Ekle butonu bulunmalı ve fiyat üzerine hover yapıldığında aktif hale gelmelidir.",
+              "fullTitle": "User Story - 02 - Ürün Arama ve Listeleme AC5 - Ürün kartında Sepete Ekle butonu bulunmalı ve fiyat üzerine hover yapıldığında aktif hale gelmelidir.",
+              "timedOut": null,
+              "duration": 5692,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"testData\").then(data => {\n  cy.searchProduct(data.searchData.authorSearch);\n  cy.url().should(\"include\", \"/arama\");\n  cy.get(_SearchPage.default.productList).find(_SearchPage.default.productCards).then($cards => {\n    const firstThreeCards = $cards.slice(0, 3);\n    cy.wrap(firstThreeCards).each($card => {\n      cy.wrap($card).find(_SearchPage.default.productPrice).should(\"be.visible\");\n      cy.wrap($card).realHover();\n      cy.wrap($card).find(_SearchPage.default.addToCartButton, {\n        timeout: 10000\n      }).should(\"be.visible\");\n    });\n  });\n});",
+              "err": {},
+              "uuid": "f935ad63-e43a-4c0e-811b-bd309a714491",
+              "parentUUID": "53c55177-b976-492b-971d-54bd4b013b8d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f935ad63-e43a-4c0e-811b-bd309a714491"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5692,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

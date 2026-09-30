@@ -1,6 +1,6 @@
 {
-    "email": "ttttestgencay@gmail.com",
-    "password": "Admin123!",
+    "email": "ssemraggenc@gmial.com",
+    "password": "Tester123!",
     "invalidEmails": [
         "semra",
         "semra@",
@@ -42,5 +42,11 @@
             "menu": "SINAV KİTAPLARI",
             "expectedTitle": "Sınavlara Hazırlık Kitapları"
         }
-    ]
+    ],
+    "creditCard": {
+        "cardHolderName": "Tester User",
+        "cardNumber": "8676543211234567",
+        "expiryDate": "1230",
+        "cvv": "123"
+    }
 }

@@ -14,7 +14,6 @@ class LoginPage {
     remindPasswordButton = "#forgot-password-btn-292";
     logoutButton = '[id^="member-logout-btn-"]';
     registerButton = '.member-register-btn a[href="/uye-kayit"]';
-    userAvatar = ".member-quick-menu-avatar";
     messagesButton = 'a[href="/mesaj"]';
 
     clickLoginEmailButton() {

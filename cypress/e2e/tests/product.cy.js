@@ -31,21 +31,12 @@ describe("User Story - 03 - Ürün Detay Sayfası Görüntüleme ve Sepete Eklem
     });
 
     it("AC3 - Ürün Hakkında Bilgiler bölümünde ürün detay bilgileri görüntülenmelidir.", () => {
-        cy.get(SearchPage.productName).first().click();
-        cy.get("body").then(($body) => {
-            const informationSection = $body
-                .find(ProductPage.productInformationSection)
-                .filter(":visible");
-            if (informationSection.length > 0) {
-                cy.wrap(informationSection).within(() => {
-                    ProductPage.productDetailLabels.forEach((label) => {
-                        cy.contains(label).should("be.visible");
-                    });
+        cy.get(SearchPage.productName).eq(1).click();
+        cy.get(ProductPage.productInformationSection).should("be.visible").within(() => {
+                ProductPage.productDetailLabels.forEach((label) => {
+                    cy.contains(label).should("be.visible");
                 });
-            } else {
-                cy.log("Detay bilgileri bulunan bir alan bu ürün sayfasında bulunamadı.");
-            }
-        });
+            });
     });
 
     it('AC4 - Ürün detay sayfasında fiyat bilgisinin altında işlevsel bir "Sepete Ekle" butonu bulunmalıdır.', () => {

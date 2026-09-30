@@ -11,7 +11,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^16.1.0"
+    "cypress": "^16.1.0",
+    "mochawesome": "^8.1.1"
   },
   "dependencies": {
     "cypress-real-events": "^1.15.1"

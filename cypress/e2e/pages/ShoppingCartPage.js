@@ -3,7 +3,6 @@ class ShoppingCartPage {
     cartNavigation = '[id^="header-cart-panel-"].drawer-wrapper';
     goToCartButton = "#go-cart-btn";
     popupCloseButton = ".t-modal-container .t-modal-close";
-    productTotalPrices = "";
     cartItems = ".cart-item";
     productName = ".d-block.cart-item-title";
     productQuantity = '.cart-item-qty input[type="number"]';
